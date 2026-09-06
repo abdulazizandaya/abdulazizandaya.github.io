@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — Abdulaziz Andaya</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="nav fade-in">
+    <div class="nav-left">
+      <span class="nav-logo">AA</span>
+      <span class="nav-name">Abdulaziz Andaya</span>
+    </div>
+
+    <nav class="nav-right" id="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="index.html#disciplines">Disciplines</a>
+      <a href="portfolio.html" class="active">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <button id="menu-toggle" class="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Portfolio Content -->
+  <section class="content fade-in">
+    <h2>Portfolio</h2>
+
+    <p>
+      A curated selection of work across identity, photography, video, and 3D visualization.
+      Each project reflects a cinematic tone, editorial clarity, and disciplined visual direction.
+    </p>
+
+    <div class="portfolio-grid">
+
+      <div class="portfolio-item">
+        <h3>Brand Identity Systems</h3>
+        <p>
+          Multi‑brand identity frameworks built for clarity, consistency, and premium cinematic tone.
+        </p>
+      </div>
+
+      <div class="portfolio-item">
+        <h3>Editorial Photography</h3>
+        <p>
+          Atmospheric stills with restrained composition and a precise editorial eye.
+        </p>
+      </div>
+
+      <div class="portfolio-item">
+        <h3>Video Production</h3>
+        <p>
+          Cinematic sequences crafted with narrative discipline and technical precision.
+        </p>
+      </div>
+
+      <div class="portfolio-item">
+        <h3>3D Visualization</h3>
+        <p>
+          Conceptual worlds and objects rendered with depth, realism, and narrative intent.
+        </p>
+      </div>
+
+      <div class="portfolio-item">
+        <h3>Creative Direction</h3>
+        <p>
+          Visual leadership across multi‑team environments, ensuring coherence from concept to delivery.
+        </p>
+      </div>
+
+      <div class="portfolio-item">
+        <h3>Technical Workflow Design</h3>
+        <p>
+          Systems and processes that allow creative teams to move with clarity, speed, and intent.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="content fade-in">
+    <p>&copy; <span id="year"></span> Abdulaziz “Marlon” Andaya — Cinematic Portfolio.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
