@@ -9,10 +9,33 @@
 
 body {
   font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.2px;
   background-color: #0F1F3A; /* Deep Space Blue */
   color: #C0C0C0; /* Apple Silver */
   overflow-x: hidden;
   line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.section-label {
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.discipline-name {
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.discipline-desc {
+  font-weight: 400;
+  letter-spacing: 0.1px;
 }
 
 /* --------------------------------------------------
