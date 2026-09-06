@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disciplines — Abdulaziz Andaya</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="nav fade-in">
+    <div class="nav-left">
+      <span class="nav-logo">AA</span>
+      <span class="nav-name">Abdulaziz Andaya</span>
+    </div>
+    <nav class="nav-right" id="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="disciplines.html" class="active">Disciplines</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button id="menu-toggle" class="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Disciplines Section -->
+  <section id="disciplines" class="content fade-in">
+    <div class="disciplines-header">
+      <p class="section-label">02 / DISCIPLINES</p>
+      <h2 class="disciplines-title">The full picture.</h2>
+      <p class="disciplines-sub">
+        A connected set of capabilities, assembled around the needs of the idea — not a list of services.
+      </p>
+    </div>
+
+    <div class="disciplines-list">
+      <div class="discipline-item">
+        <span class="discipline-number">01</span>
+        <span class="discipline-name">Design</span>
+        <span class="discipline-desc">Identity, visual language, and systems that make a point of view legible.</span>
+        <span class="discipline-arrow">→</span>
+      </div>
+
+      <div class="discipline-item">
+        <span class="discipline-number">02</span>
+        <span class="discipline-name">Photography</span>
+        <span class="discipline-desc">Still images with atmosphere, restraint, and a precise editorial eye.</span>
+        <span class="discipline-arrow">→</span>
+      </div>
+
+      <div class="discipline-item">
+        <span class="discipline-number">03</span>
+        <span class="discipline-name">Video Production</span>
+        <span class="discipline-desc">From first frame to final delivery — a production built to hold attention.</span>
+        <span class="discipline-arrow">→</span>
+      </div>
+
+      <div class="discipline-item">
+        <span class="discipline-number">04</span>
+        <span class="discipline-name">Creative Direction</span>
+        <span class="discipline-desc">Aligning people, process, and ambition around one clear visual idea.</span>
+        <span class="discipline-arrow">→</span>
+      </div>
+
+      <div class="discipline-item">
+        <span class="discipline-number">05</span>
+        <span class="discipline-name">3D Visualization</span>
+        <span class="discipline-desc">Worlds, objects, and concepts made tangible before they exist.</span>
+        <span class="discipline-arrow">→</span>
+      </div>
+
+      <div class="discipline-item">
+        <span class="discipline-number">06</span>
+        <span class="discipline-name">Technical Systems Workflow</span>
+        <span class="discipline-desc">The invisible architecture that lets creative teams move with intent.</span>
+        <span class="discipline-arrow">→</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="content fade-in" style="text-align:center;font-size:0.9rem;">
+    <p>&copy; <span id="year"></span> Abdulaziz “Marlon” Andaya — Cinematic Portfolio.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
