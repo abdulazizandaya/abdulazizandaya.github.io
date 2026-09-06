@@ -25,3 +25,11 @@ window.addEventListener('load', () => {
     loader.classList.add('hidden');
   }, 800); // cinematic delay
 });
+// Hamburger Menu Toggle
+const menuToggle = document.getElementById('menu-toggle');
+const navLinks = document.getElementById('nav-links');
+
+menuToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+  menuToggle.classList.toggle('open');
+});
