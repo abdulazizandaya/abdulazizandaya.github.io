@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Abdulaziz Andaya</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Include the same header -->
+  <header class="nav fade-in">
+    <div class="nav-left">
+      <span class="nav-logo">AA</span>
+      <span class="nav-name">Abdulaziz Andaya</span>
+    </div>
+    <nav class="nav-right" id="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="disciplines.html">Disciplines</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button id="menu-toggle" class="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Page Content -->
+  <section class="content fade-in">
+    <h2>About</h2>
+    <p>
+      I work where strong visual ideas meet the systems required to bring them into the world.
+      My practice moves between image‑making, direction, production, and technical infrastructure.
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="content fade-in" style="text-align:center;font-size:0.9rem;">
+    <p>&copy; <span id="year"></span> Abdulaziz “Marlon” Andaya — Cinematic Portfolio.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
