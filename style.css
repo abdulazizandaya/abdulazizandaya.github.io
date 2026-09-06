@@ -568,4 +568,98 @@ body.light .portfolio-item:hover {
   transform: translateX(6px);
   color: #E0C0BC;
 }
+/* Discipline Links — Remove Underlines and Color Shifts */
+.discipline-item {
+  text-decoration: none;
+  color: inherit;
+}
+
+.discipline-item:hover,
+.discipline-item:focus,
+.discipline-item:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Discipline Layout Consistency */
+.disciplines-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 40px;
+}
+
+.discipline-item {
+  display: grid;
+  grid-template-columns: 60px 220px 1fr 40px;
+  align-items: center;
+  padding: 20px 30px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+/* Hover Motion */
+.discipline-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(224, 192, 188, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 0 12px rgba(224, 192, 188, 0.15);
+}
+
+/* Typography — Unified Across Screen Sizes */
+.discipline-number {
+  font-size: 0.9rem;
+  color: #7A8CA9;
+  font-weight: 500;
+}
+
+.discipline-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #C0C0C0;
+}
+
+.discipline-desc {
+  font-size: 0.95rem;
+  color: #BFC3C7;
+}
+
+.discipline-arrow {
+  font-size: 1.3rem;
+  color: #7A8CA9;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.discipline-item:hover .discipline-arrow {
+  transform: translateX(6px);
+  color: #E0C0BC;
+}
+
+/* Large Screen Consistency */
+@media (min-width: 1024px) {
+  .disciplines-list {
+    max-width: 900px;
+    margin: 60px auto;
+  }
+
+  .discipline-item {
+    padding: 24px 40px;
+    grid-template-columns: 80px 260px 1fr 40px;
+  }
+
+  .discipline-number {
+    font-size: 1rem;
+  }
+
+  .discipline-name {
+    font-size: 1.3rem;
+  }
+
+  .discipline-desc {
+    font-size: 1rem;
+  }
+}
 
