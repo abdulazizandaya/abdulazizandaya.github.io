@@ -1,7 +1,138 @@
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: #0F1F3A;
-  color: #C0C0C0;
+/* ------------------------------------------------------
+   Abdulaziz “Marlon” Andaya — Premium Cinematic Stylesheet
+   ------------------------------------------------------ */
+
+/* Global Reset */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #0F1F3A; /* Deep Space Blue */
+  color: #C0C0C0; /* Apple Silver */
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Smooth Rendering */
+.parallax,
+.fade-in,
+.hero-text {
+  will-change: transform, opacity;
+}
+
+/* ------------------------------------------------------
+   Parallax Background Layers
+   ------------------------------------------------------ */
+
+.parallax-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+}
+
+.parallax-bg.layer1 {
+  background-image: url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80');
+}
+
+.parallax-bg.layer2 {
+  background-image: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80');
+  opacity: 0.35;
+  z-index: -1;
+}
+
+/* ------------------------------------------------------
+   Hero Section
+   ------------------------------------------------------ */
+
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-text {
+  font-size: 3.8rem;
+  font-weight: 700;
+  color: #C0C0C0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: opacity 0.4s ease-out;
+}
+
+.hero-sub {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #BFC3C7; /* Premium Matte Silver */
+  margin-top: 10px;
+}
+
+/* Fade-in elements */
+.fade-in {
+  opacity: 0;
+}
+
+/* ------------------------------------------------------
+   Content Section
+   ------------------------------------------------------ */
+
+.content {
+  padding: 120px 40px;
+  max-width: 900px;
+  margin: auto;
+  color: #C0C0C0;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #E0C0BC; /* Warm highlight */
+  letter-spacing: 1px;
+}
+
+.content p {
+  margin-bottom: 20px;
+}
+
+/* ------------------------------------------------------
+   Responsive Design
+   ------------------------------------------------------ */
+
+@media (max-width: 768px) {
+  .hero-text {
+    font-size: 2.8rem;
+  }
+
+  .hero-sub {
+    font-size: 1rem;
+  }
+
+  .content {
+    padding: 80px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text {
+    font-size: 2.2rem;
+  }
+
+  .hero-sub {
+    font-size: 0.9rem;
+  }
 }
