@@ -662,4 +662,82 @@ body.light .portfolio-item:hover {
     font-size: 1rem;
   }
 }
+/* Discipline Layout — Unified and Minimal */
+.disciplines-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.discipline-item {
+  display: grid;
+  grid-template-columns: 60px 220px 1fr 40px;
+  align-items: center;
+  padding: 22px 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: transparent;
+  transition: all 0.4s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.discipline-item:hover {
+  background: rgba(255, 255, 255, 0.04);
+  transform: translateY(-2px);
+}
+
+/* Typography — Consistent Across All Screens */
+.discipline-number {
+  font-size: 0.9rem;
+  color: #7A8CA9;
+  font-weight: 500;
+}
+
+.discipline-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #C0C0C0;
+}
+
+.discipline-desc {
+  font-size: 0.95rem;
+  color: #BFC3C7;
+}
+
+.discipline-arrow {
+  font-size: 1.3rem;
+  color: #7A8CA9;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.discipline-item:hover .discipline-arrow {
+  transform: translateX(6px);
+  color: #E0C0BC;
+}
+
+/* Large Screen Consistency */
+@media (min-width: 1024px) {
+  .disciplines-list {
+    max-width: 900px;
+    margin: 60px auto;
+  }
+
+  .discipline-item {
+    padding: 26px 40px;
+    grid-template-columns: 80px 260px 1fr 40px;
+  }
+
+  .discipline-number {
+    font-size: 1rem;
+  }
+
+  .discipline-name {
+    font-size: 1.3rem;
+  }
+
+  .discipline-desc {
+    font-size: 1rem;
+  }
+}
 
