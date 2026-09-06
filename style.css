@@ -329,3 +329,107 @@ body.light .portfolio-item:hover {
     display: none;
   }
 }
+
+/* Disciplines Section */
+.disciplines-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 60px;
+}
+
+.section-label {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: #7A8CA9;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.disciplines-title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #C0C0C0;
+  line-height: 1.1;
+}
+
+.disciplines-sub {
+  font-size: 1rem;
+  color: #BFC3C7;
+  margin-top: 20px;
+  max-width: 600px;
+}
+
+.disciplines-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 40px;
+}
+
+.discipline-item {
+  display: grid;
+  grid-template-columns: 60px 220px 1fr 40px;
+  align-items: center;
+  padding: 20px 30px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.discipline-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(224, 192, 188, 0.4);
+  transform: translateY(-4px);
+}
+
+.discipline-number {
+  font-size: 0.9rem;
+  color: #7A8CA9;
+  font-weight: 500;
+}
+
+.discipline-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #C0C0C0;
+}
+
+.discipline-desc {
+  font-size: 0.95rem;
+  color: #BFC3C7;
+}
+
+.discipline-arrow {
+  font-size: 1.3rem;
+  color: #7A8CA9;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.discipline-item:hover .discipline-arrow {
+  transform: translateX(6px);
+  color: #E0C0BC;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .disciplines-title {
+    font-size: 2.4rem;
+  }
+
+  .discipline-item {
+    grid-template-columns: 40px 160px 1fr 30px;
+    padding: 16px 20px;
+  }
+
+  .discipline-name {
+    font-size: 1.1rem;
+  }
+
+  .discipline-desc {
+    font-size: 0.9rem;
+  }
+}
+
