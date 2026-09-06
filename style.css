@@ -9,7 +9,6 @@
   box-sizing: border-box;
 }
 
-/* Body */
 body {
   font-family: 'Inter', sans-serif;
   background-color: #0F1F3A; /* Deep Space Blue */
@@ -23,6 +22,55 @@ body {
 .fade-in,
 .hero-text {
   will-change: transform, opacity;
+}
+
+/* ------------------------------------------------------
+   Navigation
+   ------------------------------------------------------ */
+
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(12px);
+  background: rgba(15, 31, 58, 0.55);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  z-index: 1000;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #E0C0BC;
+}
+
+.nav-name {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #C0C0C0;
+}
+
+.nav-right a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #C0C0C0;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.nav-right a:hover {
+  color: #E0C0BC;
 }
 
 /* ------------------------------------------------------
@@ -76,7 +124,7 @@ body {
 .hero-sub {
   font-size: 1.2rem;
   font-weight: 300;
-  color: #BFC3C7; /* Premium Matte Silver */
+  color: #BFC3C7;
   margin-top: 10px;
 }
 
@@ -86,7 +134,7 @@ body {
 }
 
 /* ------------------------------------------------------
-   Content Section
+   Content Sections
    ------------------------------------------------------ */
 
 .content {
@@ -101,12 +149,58 @@ body {
 .content h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #E0C0BC; /* Warm highlight */
+  color: #E0C0BC;
   letter-spacing: 1px;
 }
 
 .content p {
   margin-bottom: 20px;
+}
+
+/* ------------------------------------------------------
+   Portfolio Grid
+   ------------------------------------------------------ */
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.portfolio-item {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-6px);
+  border-color: #E0C0BC;
+}
+
+.portfolio-item h3 {
+  margin-bottom: 10px;
+  color: #E0C0BC;
+}
+
+.portfolio-item p {
+  font-size: 0.95rem;
+  color: #C0C0C0;
+}
+
+/* ------------------------------------------------------
+   Footer
+   ------------------------------------------------------ */
+
+footer {
+  text-align: center;
+  padding: 40px 0;
+  font-size: 0.9rem;
+  color: #BFC3C7;
 }
 
 /* ------------------------------------------------------
@@ -125,6 +219,14 @@ body {
   .content {
     padding: 80px 20px;
   }
+
+  .nav {
+    padding: 0 20px;
+  }
+
+  .nav-right a {
+    margin-left: 15px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -134,5 +236,9 @@ body {
 
   .hero-sub {
     font-size: 0.9rem;
+  }
+
+  .nav-right {
+    display: none;
   }
 }
