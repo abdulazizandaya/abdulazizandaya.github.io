@@ -3,8 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abdulaziz Andaya — Cinematic Portfolio</title>
+  <title>Abdulaziz Andaya — Creative & Media Production Lead</title>
+
+  <!-- Inter Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,9 +27,9 @@
     </div>
 
     <nav class="nav-right" id="nav-links">
-      <a href="index.html">Home</a>
+      <a href="index.html" class="active">Home</a>
       <a href="about.html">About</a>
-      <a href="index.html#disciplines">Disciplines</a>
+      <a href="#disciplines">Disciplines</a>
       <a href="portfolio.html">Portfolio</a>
       <a href="contact.html">Contact</a>
     </nav>
@@ -51,21 +55,48 @@
   </section>
 
   <!-- About Section -->
-  <section class="content fade-in" id="about">
-    <h2>About</h2>
-    <p>
-      I work where strong visual ideas meet the systems required to bring them into the world.
-      My practice moves between image‑making, direction, production, and technical infrastructure —
-      ensuring coherence across multi‑brand environments.
-    </p>
-    <p>
-      With a premium cinematic aesthetic and a disciplined editorial approach, I build frameworks
-      that allow creative teams to move with clarity and intent.
-    </p>
+  <section id="about" class="about-section fade-in">
+    <div class="about-grid">
+      <div class="about-left">
+        <p class="section-label">01 / ABOUT</p>
+        <h2 class="about-title">One foot<br>in each<br>world.</h2>
+      </div>
+
+      <div class="about-right">
+        <p class="about-lead">
+          I work where a strong visual idea meets the systems required to bring it into the world.
+        </p>
+
+        <p class="about-text">
+          My practice moves between image‑making, art direction, production, 3D, and the technical
+          infrastructure behind a good team. That hybrid perspective lets me protect the feeling while
+          staying close to the details — the brief, the lens, the render, the handoff.
+        </p>
+
+        <p class="about-quote">
+          The work is visual. The thinking is structural. The standard is the same either way.
+        </p>
+
+        <div class="about-stats">
+          <div class="stat">
+            <h3>12+</h3>
+            <p>Years Making</p>
+          </div>
+          <div class="stat">
+            <h3>24</h3>
+            <p>Markets Reached</p>
+          </div>
+          <div class="stat">
+            <h3>01</h3>
+            <p>Clear Point of View</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Disciplines Section -->
-  <section class="content fade-in" id="disciplines">
+  <section id="disciplines" class="content fade-in">
     <div class="disciplines-header">
       <p class="section-label">02 / DISCIPLINES</p>
       <h2 class="disciplines-title">The full picture.</h2>
@@ -129,45 +160,73 @@
   </section>
 
   <!-- Portfolio Section -->
-  <section class="content fade-in" id="portfolio">
-    <h2>Portfolio</h2>
+  <section id="portfolio" class="portfolio-section fade-in">
+    <div class="portfolio-header">
+      <p class="section-label">03 / SELECTED WORK</p>
+      <h2 class="portfolio-title">Made to<br>stay with you.</h2>
+      <p class="portfolio-sub">
+        A selection of directions, campaigns, worlds, and systems.<br>
+        Each one starts with a question.
+      </p>
+    </div>
 
     <div class="portfolio-grid">
-      <div class="portfolio-item">
-        <h3>Brand Identity Systems</h3>
-        <p>Multi‑brand identity frameworks built for clarity, consistency, and cinematic tone.</p>
+
+      <div class="portfolio-card">
+        <img src="assets/quiet-machinery.jpg" alt="Quiet Machinery" class="portfolio-image">
+        <div class="portfolio-info">
+          <p class="portfolio-category">ART DIRECTION / FILM</p>
+          <h3 class="portfolio-name">Quiet Machinery</h3>
+          <p class="portfolio-meta">2024 / Selected project</p>
+        </div>
       </div>
 
-      <div class="portfolio-item">
-        <h3>Editorial Photography</h3>
-        <p>Atmospheric stills with restrained composition and premium tonal direction.</p>
+      <div class="portfolio-card">
+        <img src="assets/after-the-signal.jpg" alt="After the Signal" class="portfolio-image">
+        <div class="portfolio-info">
+          <p class="portfolio-category">PHOTOGRAPHY / EDITORIAL</p>
+          <h3 class="portfolio-name">After the Signal</h3>
+          <p class="portfolio-meta">2023 / Selected project</p>
+        </div>
       </div>
 
-      <div class="portfolio-item">
-        <h3>Video Production</h3>
-        <p>Cinematic sequences crafted with narrative discipline and technical precision.</p>
+      <div class="portfolio-card">
+        <img src="assets/architecture.jpg" alt="Architecture Project" class="portfolio-image">
+        <div class="portfolio-info">
+          <p class="portfolio-category">ARCHITECTURE / DESIGN</p>
+          <h3 class="portfolio-name">Structural Silence</h3>
+          <p class="portfolio-meta">2024 / Selected project</p>
+        </div>
       </div>
 
-      <div class="portfolio-item">
-        <h3>3D Visualization</h3>
-        <p>Conceptual worlds and objects rendered with depth, realism, and narrative intent.</p>
+      <div class="portfolio-card">
+        <img src="assets/light-matter.jpg" alt="Light Matter" class="portfolio-image">
+        <div class="portfolio-info">
+          <p class="portfolio-category">3D VISUALIZATION</p>
+          <h3 class="portfolio-name">Light / Matter</h3>
+          <p class="portfolio-meta">2024 / Selected project</p>
+        </div>
       </div>
+
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="content fade-in">
-    <p>&copy; <span id="year"></span> Abdulaziz “Marlon” Andaya — Cinematic Portfolio.</p>
+  <footer class="footer fade-in">
+    <div class="footer-content">
+      <p class="footer-left">© <span id="year"></span> Abdulaziz Andaya</p>
+      <p class="footer-center">Creative & Media Production Lead</p>
+      <p class="footer-right">
+        <a href="#" target="_blank">LinkedIn</a>
+        <a href="#" target="_blank">Instagram</a>
+      </p>
+    </div>
   </footer>
 
   <!-- Scripts -->
   <script src="script.js"></script>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    window.addEventListener("load", () => {
-      document.getElementById("loader").classList.add("hidden");
-    });
   </script>
 
 </body>
