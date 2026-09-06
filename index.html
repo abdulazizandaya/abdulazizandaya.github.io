@@ -3,116 +3,122 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abdulaziz Andaya — Cinematic Portfolio</title>
+  <title>Abdulaziz “Marlon” Andaya — Cinematic Portfolio</title>
 
-  <!-- Link to your CSS -->
+  <!-- Main CSS -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- Google Font (Inter) -->
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
-
-  <style>
-    /* Inline essentials for layout (your main styling stays in style.css) */
-
-    body {
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden;
-    }
-
-    /* Parallax background layers */
-    .parallax-bg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
-      background-size: cover;
-      background-position: center;
-      z-index: -2;
-    }
-
-    .parallax-bg.layer1 {
-      background-image: url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80');
-    }
-
-    .parallax-bg.layer2 {
-      background-image: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80');
-      opacity: 0.35;
-      z-index: -1;
-    }
-
-    /* Hero section */
-    .hero {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 0 20px;
-    }
-
-    .hero-text {
-      font-size: 3.5rem;
-      font-weight: 700;
-      color: #C0C0C0;
-      letter-spacing: 2px;
-      margin: 0;
-    }
-
-    .hero-sub {
-      font-size: 1.2rem;
-      font-weight: 300;
-      color: #BFC3C7;
-      margin-top: 10px;
-    }
-
-    /* Fade-in elements */
-    .fade-in {
-      opacity: 0;
-    }
-
-    /* Section below hero */
-    .content {
-      padding: 120px 40px;
-      max-width: 900px;
-      margin: auto;
-      color: #C0C0C0;
-      font-size: 1.1rem;
-      line-height: 1.7;
-    }
-  </style>
 </head>
-
 <body>
 
   <!-- Parallax Background Layers -->
   <div class="parallax parallax-bg layer1" data-speed="0.2"></div>
   <div class="parallax parallax-bg layer2" data-speed="0.4"></div>
 
+  <!-- Navigation -->
+  <header class="nav fade-in">
+    <div class="nav-left">
+      <span class="nav-logo">AA</span>
+      <span class="nav-name">Abdulaziz Andaya</span>
+    </div>
+    <nav class="nav-right">
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
   <!-- Hero Section -->
-  <section class="hero fade-in">
-    <h1 class="hero-text">Abdulaziz “Marlon” Andaya</h1>
-    <p class="hero-sub">Creative & Media Production Lead — Cinematic Identity</p>
-  </section>
-
-  <!-- Content Section -->
-  <section class="content fade-in">
-    <h2>About Me</h2>
-    <p>
-      I build premium cinematic identities across multi-brand environments, blending editorial storytelling,
-      precision design, and immersive motion. My work spans photography, videography, 3D rendering, and
-      creative direction — crafted with discipline, clarity, and a signature deep-space aesthetic.
-    </p>
-
-    <p>
-      This portfolio is a living canvas of my craft — evolving, adaptive, and intentionally minimal.
+  <section id="hero" class="hero fade-in">
+    <h1 class="hero-text">Cinematic Creative Direction</h1>
+    <p class="hero-sub">
+      Multi-brand media production, editorial storytelling, and premium visual identity across 17 subsidiaries.
     </p>
   </section>
 
-  <!-- Link to your JS -->
+  <!-- About Section -->
+  <section id="about" class="content fade-in">
+    <h2>About</h2>
+    <p>
+      I am a Creative & Media Production Lead overseeing multi-brand creative operations across a holding group.
+      My work blends cinematic storytelling, precise design systems, and disciplined execution — built to scale
+      across diverse visual identities while maintaining a premium, cohesive core.
+    </p>
+    <p>
+      From photography and videography to 3D rendering and editorial layouts, I design experiences that feel
+      intentional, minimal, and deeply atmospheric.
+    </p>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="content fade-in">
+    <h2>Services</h2>
+    <p>
+      I specialize in end-to-end creative direction and media production, including:
+    </p>
+    <ul>
+      <li>Creative & Media Production Leadership for multi-brand environments</li>
+      <li>Premium cinematic branding and identity systems</li>
+      <li>Editorial photography and visual storytelling</li>
+      <li>Video direction and cinematic motion design</li>
+      <li>3D modeling, rendering, and atmospheric visuals</li>
+    </ul>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="content fade-in">
+    <h2>Portfolio</h2>
+    <p>
+      A curated selection of work spanning brand systems, editorial visuals, and cinematic campaigns.
+      This section can later be expanded into a grid of case studies, each reflecting a distinct brand
+      while maintaining a unified, premium aesthetic.
+    </p>
+
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <h3>Multi-Brand Identity System</h3>
+        <p>Unified visual language across 17 subsidiaries with adaptable palettes and cinematic tone.</p>
+      </div>
+      <div class="portfolio-item">
+        <h3>Editorial Campaign</h3>
+        <p>Photography and layout design with deep-space lighting and restrained typography.</p>
+      </div>
+      <div class="portfolio-item">
+        <h3>Cinematic Launch Video</h3>
+        <p>Story-driven visual narrative combining motion, sound, and brand presence.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="content fade-in">
+    <h2>Contact</h2>
+    <p>
+      For collaborations, creative direction, or media production inquiries, you can reach out via email.
+    </p>
+    <p>
+      <strong>Email:</strong> andayaleizel25@gmail.com
+    </p>
+    <p>
+      This portfolio is intentionally minimal — a foundation for future case studies, reels, and interactive
+      experiences that reflect a premium, cinematic identity.
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="content fade-in" style="padding-top: 40px; padding-bottom: 40px; text-align: center; font-size: 0.9rem;">
+    <p>&copy; <span id="year"></span> Abdulaziz “Marlon” Andaya — Cinematic Portfolio.</p>
+  </footer>
+
+  <!-- Script -->
   <script src="script.js"></script>
-
+  <script>
+    // Simple year injection for footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
