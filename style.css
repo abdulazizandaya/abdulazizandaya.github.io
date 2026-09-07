@@ -77,34 +77,77 @@ nav a:hover {
 }
 
 /* --------------------------------------------------
-   SECTIONS
+   ABOUT SECTION
 -------------------------------------------------- */
-.section {
-  padding: 80px 40px;
-  max-width: 900px;
+.about-section {
+  padding: 140px 40px;
+  max-width: 1200px;
   margin: auto;
+  background-color: #0F1F3A;
 }
 
-.section h2 {
-  font-size: 32px;
-  color: #FFFFFF;
-  margin-bottom: 20px;
-  border-left: 5px solid #BFC3C7;
-  padding-left: 15px;
+.section-label {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #7A8CA9;
 }
 
-.section p {
-  font-size: 18px;
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 60px;
+}
+
+.about-title {
+  font-weight: 800;
+  font-size: 4.2rem;
+  line-height: 1.05;
+  letter-spacing: -1px;
   color: #C0C0C0;
 }
 
+.about-text {
+  font-size: 1rem;
+  color: #BFC3C7;
+}
+
+.about-quote {
+  font-size: 0.95rem;
+  color: #C0C0C0;
+  border-left: 2px solid rgba(224, 192, 188, 0.5);
+  padding-left: 16px;
+  margin-top: 10px;
+}
+
+.about-stats {
+  display: flex;
+  gap: 80px;
+  margin-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 30px;
+}
+
+.stat h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.stat p {
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #7A8CA9;
+}
+
 /* --------------------------------------------------
-   DISCIPLINES SECTION (RESTORED)
+   DISCIPLINES SECTION
 -------------------------------------------------- */
 .disciplines-section {
   padding: 140px 40px;
   max-width: 1200px;
   margin: auto;
+  background-color: #0F1F3A;
 }
 
 .disciplines-header {
@@ -122,7 +165,7 @@ nav a:hover {
 .disciplines-sub {
   font-size: 1rem;
   color: #BFC3C7;
-  max-width: 500px;
+  max-width: 600px;
   margin-top: 20px;
 }
 
@@ -174,81 +217,108 @@ nav a:hover {
   color: #E0C0BC;
 }
 
-/* MOBILE FIX */
-@media (max-width: 900px) {
-  .discipline-item {
-    grid-template-columns: 40px 1fr;
-    grid-template-rows: auto auto;
-    row-gap: 6px;
-    padding: 18px 20px;
-  }
-
-  .discipline-name {
-    grid-column: span 2;
-    font-size: 1.1rem;
-  }
-
-  .discipline-desc {
-    grid-column: span 2;
-    font-size: 0.9rem;
-  }
-
-  .discipline-arrow {
-    display: none;
-  }
+/* --------------------------------------------------
+   PORTFOLIO SECTION
+-------------------------------------------------- */
+.portfolio-section {
+  padding: 140px 40px;
+  max-width: 1200px;
+  margin: auto;
 }
 
-/* --------------------------------------------------
-   PORTFOLIO GRID
--------------------------------------------------- */
+.portfolio-title {
+  font-weight: 800;
+  font-size: 4.2rem;
+  line-height: 1.05;
+  letter-spacing: -1px;
+  color: #C0C0C0;
+}
+
+.portfolio-sub {
+  font-size: 1rem;
+  color: #BFC3C7;
+  margin-top: 20px;
+}
+
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+  gap: 40px;
   margin-top: 40px;
 }
 
 .portfolio-item {
-  background: #14233F;
-  padding: 20px;
-  border-radius: 8px;
-  border: 1px solid #1F2F4F;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.4s ease, border-color 0.4s ease;
 }
 
-.portfolio-item h3 {
-  color: #FFFFFF;
-  margin-bottom: 10px;
+.portfolio-item:hover {
+  transform: translateY(-6px);
+  border-color: rgba(224, 192, 188, 0.4);
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.85);
+  transition: filter 0.4s ease;
+}
+
+.portfolio-item:hover img {
+  filter: brightness(1);
+}
+
+.portfolio-info {
+  position: absolute;
+  bottom: 20px;
+  left: 25px;
+}
+
+.portfolio-category {
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #7A8CA9;
+}
+
+.portfolio-name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #C0C0C0;
 }
 
 /* --------------------------------------------------
    CONTACT SECTION
 -------------------------------------------------- */
 .contact-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 100px 60px;
-}
-
-.contact-left {
-  flex: 1;
-  min-width: 300px;
-  max-width: 45%;
+  padding: 140px 40px;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 60px;
 }
 
 .contact-left h2 {
-  font-size: 72px;
-  font-weight: 700;
-  color: #FFFFFF;
-  line-height: 1.1;
+  font-size: 4.2rem;
+  font-weight: 800;
+  line-height: 1.05;
+  color: #C0C0C0;
 }
 
 .contact-left p {
-  font-size: 16px;
-  margin-bottom: 40px;
+  font-size: 1rem;
+  color: #BFC3C7;
+  margin-top: 20px;
 }
 
 .contact-info {
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -258,48 +328,49 @@ nav a:hover {
   display: flex;
   align-items: center;
   gap: 12px;
-  font-size: 18px;
-  color: #BFC3C7;
+  font-size: 1rem;
 }
 
 .contact-item i {
-  font-size: 22px;
+  font-size: 1.4rem;
+  color: #C0C0C0;
 }
 
 .contact-item a {
-  color: #BFC3C7;
+  color: #C0C0C0;
   text-decoration: none;
 }
 
 .contact-item a:hover {
-  opacity: 0.7;
+  color: #E0C0BC;
 }
 
-/* RIGHT SIDE FORM */
-.contact-right {
-  flex: 1;
-  min-width: 300px;
-  max-width: 45%;
-}
-
-form {
+.contact-right form {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 20px;
 }
 
 label {
-  font-size: 12px;
-  letter-spacing: 1px;
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
+  color: #7A8CA9;
 }
 
-input, textarea {
-  padding: 12px;
+input,
+textarea {
+  background: transparent;
   border: none;
-  border-bottom: 1px solid #BFC3C7;
-  background-color: #0F1F3A;
-  color: #FFFFFF;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: #C0C0C0;
+  font-size: 1rem;
+  padding: 10px 0;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #E0C0BC;
 }
 
 textarea {
@@ -307,48 +378,55 @@ textarea {
 }
 
 .note {
-  font-size: 13px;
-  color: #7A8CA8;
+  font-size: 0.85rem;
+  color: #7A8CA9;
 }
 
 button {
-  align-self: flex-end;
-  background-color: #BFC3C7;
+  background: #C0C0C0;
   color: #0F1F3A;
-  padding: 12px 30px;
-  border: none;
-  border-radius: 4px;
+  padding: 12px 28px;
+  font-size: 0.85rem;
   font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 4px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 button:hover {
-  opacity: 0.85;
+  background: #E0C0BC;
+  transform: translateY(-2px);
 }
 
 /* --------------------------------------------------
    FOOTER
 -------------------------------------------------- */
 footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 40px 40px;
+  font-size: 0.85rem;
+  color: #BFC3C7;
   text-align: center;
-  padding: 40px;
-  color: #C0C0C0;
-  background: #0F1F3A;
-  font-size: 14px;
 }
 
 /* --------------------------------------------------
    RESPONSIVE
 -------------------------------------------------- */
 @media (max-width: 900px) {
+  .about-grid,
+  .disciplines-top,
   .contact-section {
-    flex-direction: column;
-    text-align: center;
+    grid-template-columns: 1fr;
   }
-  .contact-left, .contact-right {
-    max-width: 100%;
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
   }
-  .contact-right {
-    margin-top: 60px;
+
+  .about-title,
+  .disciplines-title,
+  .portfolio-title {
+    font-size: 3rem;
   }
 }
