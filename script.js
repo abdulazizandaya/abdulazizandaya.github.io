@@ -1,57 +1,48 @@
 /* --------------------------------------------------
-   HAMBURGER MENU TOGGLE
+   MOBILE NAVIGATION TOGGLE
 -------------------------------------------------- */
-const menuToggle = document.getElementById("menu-toggle");
-const navLinks = document.getElementById("nav-links");
+function toggleMenu() {
+  const nav = document.querySelector("nav");
+  nav.classList.toggle("active");
+}
 
-menuToggle.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-  menuToggle.classList.toggle("open");
-});
+/* Close menu when clicking outside */
+document.addEventListener("click", function (event) {
+  const nav = document.querySelector("nav");
+  const hamburger = document.querySelector(".hamburger");
 
-/* Close menu when clicking a link (mobile) */
-navLinks.querySelectorAll("a").forEach(link => {
-  link.addEventListener("click", () => {
-    navLinks.classList.remove("active");
-    menuToggle.classList.remove("open");
-  });
-});
-
-/* --------------------------------------------------
-   LOADING SCREEN
--------------------------------------------------- */
-window.addEventListener("load", () => {
-  const loader = document.getElementById("loader");
-  loader.classList.add("hidden");
+  if (!nav.contains(event.target) && !hamburger.contains(event.target)) {
+    nav.classList.remove("active");
+  }
 });
 
 /* --------------------------------------------------
-   FADE-IN ANIMATION ON SCROLL
--------------------------------------------------- */
-const fadeElements = document.querySelectorAll(".fade-in");
-
-const fadeInOnScroll = () => {
-  fadeElements.forEach(el => {
-    const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight - 80) {
-      el.style.transition = "opacity 1.2s ease";
-      el.style.opacity = 1;
-    }
-  });
-};
-
-window.addEventListener("scroll", fadeInOnScroll);
-window.addEventListener("load", fadeInOnScroll);
-
-/* --------------------------------------------------
-   SMOOTH SCROLL FOR ANCHORS
+   SMOOTH SCROLLING
 -------------------------------------------------- */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener("click", function (e) {
+    e.preventDefault();
     const target = document.querySelector(this.getAttribute("href"));
     if (target) {
-      e.preventDefault();
-      target.scrollIntoView({ behavior: "smooth", block: "start" });
+      target.scrollIntoView({ behavior: "smooth" });
     }
+    document.querySelector("nav").classList.remove("active");
   });
 });
+
+/* --------------------------------------------------
+   CINEMATIC FADE-IN ON SCROLL
+-------------------------------------------------- */
+const fadeElements = document.querySelectorAll(".fade-in");
+
+function fadeInOnScroll() {
+  fadeElements.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      el.classList.add("visible");
+    }
+  });
+}
+
+window.addEventListener("scroll", fadeInOnScroll);
+fadeInOnScroll();
