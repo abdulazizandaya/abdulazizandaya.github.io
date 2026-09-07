@@ -12,18 +12,26 @@
 
 <body>
 
+<!-- HEADER -->
 <header>
   <div class="logo">
+    <i class="fa-solid fa-a"></i><i class="fa-solid fa-a"></i>
     <h1>Abdulaziz Marlon Andaya</h1>
   </div>
+
   <nav>
     <a href="#about">About</a>
     <a href="#expertise">Disciplines</a>
     <a href="#work">Selected Work</a>
     <a href="#contact">Contact</a>
   </nav>
+
+  <div class="hamburger" onclick="toggleMenu()">
+    <i class="fa-solid fa-bars"></i>
+  </div>
 </header>
 
+<!-- HERO -->
 <section class="hero">
   <h1 class="hero-name">Abdulaziz “Marlon” Andaya</h1>
   <h2 class="hero-title">CREATIVE & MEDIA PRODUCTION LEAD</h2>
@@ -36,20 +44,24 @@
 
 <!-- ABOUT -->
 <section id="about" class="about-section">
+  <p class="section-label">01 / ABOUT</p>
+
   <div class="about-grid">
     <div class="about-left">
-      <p class="section-label">01 / ABOUT</p>
       <h2 class="about-title">One<br>foot<br>in<br>each<br>world.</h2>
     </div>
+
     <div class="about-right">
       <p class="about-text">
         I work where a strong visual idea meets the systems required to bring it into the world.<br><br>
         My practice moves between image‑making, art direction, production, 3D, and the technical infrastructure behind a good team.
         That hybrid perspective lets me protect the feeling while staying close to the details — the brief, the lens, the render, the handoff.
       </p>
+
       <p class="about-quote">
         The work is visual. The thinking is structural. The standard is the same either way.
       </p>
+
       <div class="about-stats">
         <div class="stat"><h3>12+</h3><p>Years Making</p></div>
         <div class="stat"><h3>24</h3><p>Markets Reached</p></div>
@@ -61,14 +73,13 @@
 
 <!-- DISCIPLINES -->
 <section id="expertise" class="disciplines-section">
+  <p class="section-label">02 / DISCIPLINES</p>
+
   <div class="disciplines-header">
-    <p class="section-label">02 / DISCIPLINES</p>
-    <div class="disciplines-top">
-      <h2 class="disciplines-title">The full<br>picture.</h2>
-      <p class="disciplines-sub">
-        A connected set of capabilities, assembled around the needs of the idea — not a list of services.
-      </p>
-    </div>
+    <h2 class="disciplines-title">The full<br>picture.</h2>
+    <p class="disciplines-sub">
+      A connected set of capabilities, assembled around the needs of the idea — not a list of services.
+    </p>
   </div>
 
   <div class="disciplines-list">
@@ -84,16 +95,17 @@
 <!-- SELECTED WORK -->
 <section id="work" class="portfolio-section">
   <p class="section-label">03 / SELECTED WORK</p>
+
   <div class="portfolio-header">
     <h2 class="portfolio-title">Made to<br>stay with you.</h2>
     <p class="portfolio-sub">A selection of directions, campaigns, worlds, and systems.<br>Each one starts with a question.</p>
   </div>
 
   <div class="portfolio-grid">
-    <div class="portfolio-item"><img src="images/quiet-machinery.jpg" alt="Quiet Machinery"><div class="portfolio-info"><p class="portfolio-category">Direction / Selected project</p><h3 class="portfolio-name">Quiet Machinery</h3></div></div>
-    <div class="portfolio-item"><img src="images/after-signal.jpg" alt="After the Signal"><div class="portfolio-info"><p class="portfolio-category">Production / Selected project</p><h3 class="portfolio-name">After the Signal</h3></div></div>
-    <div class="portfolio-item"><img src="images/light-matter.jpg" alt="Light / Matter"><div class="portfolio-info"><p class="portfolio-category">Visual / Selected project</p><h3 class="portfolio-name">Light / Matter</h3></div></div>
-    <div class="portfolio-item"><img src="images/architecture.jpg" alt="Architecture"><div class="portfolio-info"><p class="portfolio-category">The Build Is The Story project visual</p><h3 class="portfolio-name">Architecture</h3></div></div>
+    <div class="portfolio-item"><img src="images/quiet-machinery.jpg"><div class="portfolio-info"><p class="portfolio-category">Direction / Selected project</p><h3 class="portfolio-name">Quiet Machinery</h3></div></div>
+    <div class="portfolio-item"><img src="images/after-signal.jpg"><div class="portfolio-info"><p class="portfolio-category">Production / Selected project</p><h3 class="portfolio-name">After the Signal</h3></div></div>
+    <div class="portfolio-item"><img src="images/light-matter.jpg"><div class="portfolio-info"><p class="portfolio-category">Visual / Selected project</p><h3 class="portfolio-name">Light / Matter</h3></div></div>
+    <div class="portfolio-item"><img src="images/architecture.jpg"><div class="portfolio-info"><p class="portfolio-category">The Build Is The Story</p><h3 class="portfolio-name">Architecture</h3></div></div>
   </div>
 </section>
 
@@ -102,6 +114,7 @@
   <div class="contact-left">
     <h2>Let’s<br>make the right<br>thing.</h2>
     <p>For projects, collaborations, and thoughtful conversations.</p>
+
     <div class="contact-info">
       <div class="contact-item"><i class="fa-solid fa-envelope"></i><a href="mailto:abdulaziz.andaya008@gmail.com">abdulaziz.andaya008@gmail.com</a></div>
       <div class="contact-item"><i class="fa-brands fa-whatsapp"></i><a href="https://wa.me/966558019349">+966 55 801 9349</a></div>
@@ -111,11 +124,11 @@
   <div class="contact-right">
     <form action="https://formspree.io/f/mvkowqvw" method="POST">
       <label>Name</label>
-      <input type="text" name="name" placeholder="Your name" required>
+      <input type="text" name="name" required>
       <label>Email</label>
-      <input type="email" name="email" placeholder="you@company.com" required>
-      <label>A little about the project</label>
-      <textarea name="message" placeholder="What are you making?" rows="5" required></textarea>
+      <input type="email" name="email" required>
+      <label>Project Details</label>
+      <textarea name="message" rows="5" required></textarea>
       <p class="note">No decks required. Just a good starting point.</p>
       <button type="submit">SEND INQUIRY →</button>
     </form>
@@ -125,6 +138,12 @@
 <footer>
   © 2026 Abdulaziz “Marlon” Andaya — Dammam, Saudi Arabia
 </footer>
+
+<script>
+function toggleMenu() {
+  document.querySelector("nav").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
