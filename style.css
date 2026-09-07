@@ -99,6 +99,106 @@ nav a:hover {
 }
 
 /* --------------------------------------------------
+   DISCIPLINES SECTION (RESTORED)
+-------------------------------------------------- */
+.disciplines-section {
+  padding: 140px 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.disciplines-header {
+  margin-bottom: 60px;
+}
+
+.disciplines-title {
+  font-size: 4.2rem;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -1px;
+  color: #C0C0C0;
+}
+
+.disciplines-sub {
+  font-size: 1rem;
+  color: #BFC3C7;
+  max-width: 500px;
+  margin-top: 20px;
+}
+
+.disciplines-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.discipline-item {
+  display: grid;
+  grid-template-columns: 60px 220px 1fr 40px;
+  padding: 22px 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.4s ease;
+}
+
+.discipline-item:hover {
+  background: rgba(255, 255, 255, 0.04);
+  transform: translateY(-2px);
+}
+
+.discipline-number {
+  font-size: 0.9rem;
+  color: #7A8CA9;
+}
+
+.discipline-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #C0C0C0;
+}
+
+.discipline-desc {
+  font-size: 0.95rem;
+  color: #BFC3C7;
+}
+
+.discipline-arrow {
+  font-size: 1.3rem;
+  color: #7A8CA9;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.discipline-item:hover .discipline-arrow {
+  transform: translateX(6px);
+  color: #E0C0BC;
+}
+
+/* MOBILE FIX */
+@media (max-width: 900px) {
+  .discipline-item {
+    grid-template-columns: 40px 1fr;
+    grid-template-rows: auto auto;
+    row-gap: 6px;
+    padding: 18px 20px;
+  }
+
+  .discipline-name {
+    grid-column: span 2;
+    font-size: 1.1rem;
+  }
+
+  .discipline-desc {
+    grid-column: span 2;
+    font-size: 0.9rem;
+  }
+
+  .discipline-arrow {
+    display: none;
+  }
+}
+
+/* --------------------------------------------------
    PORTFOLIO GRID
 -------------------------------------------------- */
 .portfolio-grid {
@@ -252,104 +352,3 @@ footer {
     margin-top: 60px;
   }
 }
-
-/* --------------------------------------------------
-   DISCIPLINES SECTION
--------------------------------------------------- */
-.disciplines-section {
-  padding: 140px 40px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.disciplines-header {
-  margin-bottom: 60px;
-}
-
-.disciplines-title {
-  font-size: 4.2rem;
-  font-weight: 800;
-  line-height: 1.05;
-  letter-spacing: -1px;
-  color: #C0C0C0;
-}
-
-.disciplines-sub {
-  font-size: 1rem;
-  color: #BFC3C7;
-  max-width: 500px;
-  margin-top: 20px;
-}
-
-.disciplines-list {
-  display: flex;
-  flex-direction: column;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.discipline-item {
-  display: grid;
-  grid-template-columns: 60px 220px 1fr 40px;
-  padding: 22px 30px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  text-decoration: none;
-  color: inherit;
-  transition: all 0.4s ease;
-}
-
-.discipline-item:hover {
-  background: rgba(255, 255, 255, 0.04);
-  transform: translateY(-2px);
-}
-
-.discipline-number {
-  font-size: 0.9rem;
-  color: #7A8CA9;
-}
-
-.discipline-name {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #C0C0C0;
-}
-
-.discipline-desc {
-  font-size: 0.95rem;
-  color: #BFC3C7;
-}
-
-.discipline-arrow {
-  font-size: 1.3rem;
-  color: #7A8CA9;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.discipline-item:hover .discipline-arrow {
-  transform: translateX(6px);
-  color: #E0C0BC;
-}
-
-/* MOBILE FIX */
-@media (max-width: 900px) {
-  .discipline-item {
-    grid-template-columns: 40px 1fr;
-    grid-template-rows: auto auto;
-    row-gap: 6px;
-    padding: 18px 20px;
-  }
-
-  .discipline-name {
-    grid-column: span 2;
-    font-size: 1.1rem;
-  }
-
-  .discipline-desc {
-    grid-column: span 2;
-    font-size: 0.9rem;
-  }
-
-  .discipline-arrow {
-    display: none;
-  }
-}
-
