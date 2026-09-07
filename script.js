@@ -1,6 +1,4 @@
-/* --------------------------------------------------
-   MOBILE NAVIGATION TOGGLE
--------------------------------------------------- */
+/* MOBILE NAVIGATION TOGGLE */
 function toggleMenu() {
   const nav = document.querySelector("nav");
   nav.classList.toggle("active");
@@ -16,9 +14,7 @@ document.addEventListener("click", function (event) {
   }
 });
 
-/* --------------------------------------------------
-   SMOOTH SCROLLING
--------------------------------------------------- */
+/* SMOOTH SCROLLING */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
@@ -30,9 +26,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-/* --------------------------------------------------
-   CINEMATIC FADE-IN ON SCROLL
--------------------------------------------------- */
+/* FADE-IN ON SCROLL */
 const fadeElements = document.querySelectorAll(".fade-in");
 
 function fadeInOnScroll() {
