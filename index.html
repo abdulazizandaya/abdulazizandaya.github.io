@@ -8,11 +8,9 @@
         body {
             margin: 0;
             font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-            background-color: #0F1F3A; /* Deep Space Blue */
-            color: #C0C0C0; /* Apple Silver */
+            background-color: #0F1F3A;
+            color: #C0C0C0;
         }
-
-        /* HEADER */
 
         header {
             display: flex;
@@ -28,7 +26,7 @@
         .logo h1 {
             font-size: 20px;
             font-weight: 600;
-            color: #BFC3C7; /* Premium Matte Silver */
+            color: #BFC3C7;
             letter-spacing: 1px;
             margin: 0;
         }
@@ -43,8 +41,6 @@
         nav a:hover {
             opacity: 0.7;
         }
-
-        /* HERO */
 
         .hero {
             text-align: center;
@@ -75,8 +71,6 @@
             line-height: 1.7;
         }
 
-        /* SECTIONS */
-
         .section {
             padding: 80px 40px;
             max-width: 900px;
@@ -96,8 +90,6 @@
             line-height: 1.7;
             color: #C0C0C0;
         }
-
-        /* PORTFOLIO GRID */
 
         .portfolio-grid {
             display: grid;
@@ -121,7 +113,45 @@
             font-size: 18px;
         }
 
-        /* FOOTER */
+        /* CONTACT BLOCK ABOVE FOOTER */
+        .contact-block {
+            background-color: #0F1F3A;
+            text-align: center;
+            padding: 80px 40px 60px;
+            border-top: 1px solid #1F2F4F;
+        }
+
+        .contact-block h2 {
+            font-size: 48px;
+            color: #FFFFFF;
+            margin-bottom: 20px;
+        }
+
+        .contact-block p {
+            font-size: 18px;
+            color: #C0C0C0;
+            margin-bottom: 40px;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 18px;
+            color: #BFC3C7;
+        }
+
+        .contact-item i {
+            font-size: 22px;
+            color: #BFC3C7;
+        }
 
         footer {
             text-align: center;
@@ -139,6 +169,9 @@
         a:hover {
             opacity: 0.7;
         }
+
+        /* ICONS (Font Awesome CDN) */
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
     </style>
 </head>
 
@@ -225,17 +258,16 @@
     </div>
 </section>
 
-<section id="contact" class="section">
-    <h2>Contact</h2>
-    <p>
-        For collaborations, institutional projects, or healthcare‑aligned media work, you can reach out via your preferred
-        channel and reference this portfolio as a summary of my disciplines and approach.
-    </p>
-</section>
+<!-- CONTACT BLOCK -->
+<section class="contact-block">
+    <h2>Let’s make the right thing.</h2>
+    <p>For projects, collaborations, and thoughtful conversations.</p>
 
-<footer>
-    © 2026 Abdulaziz “Marlon” Andaya — Dammam, Saudi Arabia
-</footer>
-
-</body>
-</html>
+    <div class="contact-links">
+        <div class="contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:abdulaziz.andaya008@gmail.com">abdulaziz.andaya008@gmail.com</a>
+        </div>
+        <div class="contact-item">
+            <i class="fa-brands fa-whatsapp"></i>
+            <a href="https://wa.me/966558019349
