@@ -8,12 +8,8 @@ body {
   line-height: 1.6;
 }
 
-/* OUTER FULL-WIDTH BACKGROUND SECTIONS */
-.hero-bg,
-.about-bg,
-.disciplines-bg,
-.work-bg,
-.contact-bg {
+/* OUTER FULL-WIDTH BACKGROUND */
+.bg-section {
   position: relative;
   width: 100vw;
   left: 50%;
@@ -24,29 +20,18 @@ body {
 }
 
 /* INNER CENTERED CONTENT */
-.hero-inner,
-.about-inner,
-.disciplines-inner,
-.work-inner,
-.contact-inner {
+.section-inner {
   max-width: 1200px;
   margin: auto;
   padding: 100px 40px 80px;
 }
 
-/* BACKGROUND COLORS */
-.hero-bg        { background-color: #0F1F3A; } /* Deep Space Blue */
-.about-bg       { background-color: #0A162C; }
-.disciplines-bg { background-color: #0F1F3A; }
-.work-bg        { background-color: #0A162C; }
-.contact-bg     { background-color: #0F1F3A; }
+/* ALTERNATING BACKGROUNDS */
+.bg-section:nth-of-type(odd)  { background-color: #0A162C; }
+.bg-section:nth-of-type(even) { background-color: #0F1F3A; }
 
 /* GEOMETRIC PATTERN */
-.hero-bg::before,
-.about-bg::before,
-.disciplines-bg::before,
-.work-bg::before,
-.contact-bg::before {
+.bg-section::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -165,21 +150,7 @@ nav a:hover { color: #E0C0BC; }
 .about-title {
   font-size: 4.2rem;
   font-weight: 800;
-  line-height: 1.05;
   margin-bottom: 20px;
-}
-
-.about-text {
-  font-size: 1rem;
-  color: #BFC3C7;
-  margin-bottom: 20px;
-}
-
-.about-quote {
-  margin-top: 20px;
-  padding-left: 16px;
-  border-left: 2px solid #E0C0BC;
-  font-size: 0.95rem;
 }
 
 .about-stats {
@@ -205,21 +176,17 @@ nav a:hover { color: #E0C0BC; }
 .disciplines-header {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
-  align-items: start;
-  margin-bottom: 40px;
+  gap: 40px;
 }
 
 .disciplines-title {
   font-size: 4.2rem;
   font-weight: 800;
-  margin-bottom: 10px;
 }
 
 .disciplines-sub {
   max-width: 500px;
-  font-size: 1rem;
   color: #BFC3C7;
-  margin-top: 10px;
 }
 
 .disciplines-list {
@@ -234,15 +201,11 @@ nav a:hover { color: #E0C0BC; }
   border-bottom: 1px solid rgba(255,255,255,0.1);
   text-decoration: none;
   color: inherit;
-  transition: 0.3s;
 }
 
-.discipline-item:hover { background: rgba(255,255,255,0.05); }
-
-.discipline-number { color: #7A8CA9; }
-.discipline-name { font-size: 1.2rem; font-weight: 600; }
-.discipline-desc { font-size: 0.95rem; color: #BFC3C7; }
-.discipline-arrow { font-size: 1.3rem; color: #7A8CA9; }
+.discipline-item:hover {
+  background: rgba(255,255,255,0.05);
+}
 
 /* WORK */
 .portfolio-header {
@@ -255,13 +218,6 @@ nav a:hover { color: #E0C0BC; }
 .portfolio-title {
   font-size: 4.2rem;
   font-weight: 800;
-  margin-bottom: 10px;
-}
-
-.portfolio-sub {
-  max-width: 500px;
-  font-size: 1rem;
-  color: #BFC3C7;
 }
 
 .portfolio-grid {
@@ -290,16 +246,6 @@ nav a:hover { color: #E0C0BC; }
   left: 25px;
 }
 
-.portfolio-category {
-  font-size: 0.75rem;
-  color: #7A8CA9;
-}
-
-.portfolio-name {
-  font-size: 1.4rem;
-  font-weight: 600;
-}
-
 /* CONTACT */
 .contact-section {
   display: grid;
@@ -310,7 +256,6 @@ nav a:hover { color: #E0C0BC; }
 .contact-left h2 {
   font-size: 4.2rem;
   font-weight: 800;
-  margin-bottom: 20px;
 }
 
 .contact-info {
@@ -319,15 +264,6 @@ nav a:hover { color: #E0C0BC; }
   flex-direction: column;
   gap: 16px;
 }
-
-.contact-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.contact-item i { font-size: 1.4rem; }
-.contact-item a { color: #C0C0C0; text-decoration: none; }
 
 .contact-right form {
   display: flex;
