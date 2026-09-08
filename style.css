@@ -8,8 +8,12 @@ body {
   line-height: 1.6;
 }
 
-/* FULL-WIDTH BACKGROUND WITH CENTERED CONTENT */
-section {
+/* OUTER FULL-WIDTH BACKGROUND SECTIONS */
+.hero-bg,
+.about-bg,
+.disciplines-bg,
+.work-bg,
+.contact-bg {
   position: relative;
   width: 100vw;
   left: 50%;
@@ -19,20 +23,30 @@ section {
   overflow: hidden;
 }
 
-/* Inner content stays centered */
-.section-inner {
+/* INNER CENTERED CONTENT */
+.hero-inner,
+.about-inner,
+.disciplines-inner,
+.work-inner,
+.contact-inner {
   max-width: 1200px;
   margin: auto;
-  padding: 100px 40px 80px; /* unified spacing */
+  padding: 100px 40px 80px;
 }
 
-/* ALTERNATING BACKGROUNDS */
-.hero { background-color: #0F1F3A; }
-section:nth-of-type(odd):not(.hero) { background-color: #0A162C; }
-section:nth-of-type(even):not(.hero) { background-color: #0F1F3A; }
+/* BACKGROUND COLORS */
+.hero-bg        { background-color: #0F1F3A; } /* Deep Space Blue */
+.about-bg       { background-color: #0A162C; }
+.disciplines-bg { background-color: #0F1F3A; }
+.work-bg        { background-color: #0A162C; }
+.contact-bg     { background-color: #0F1F3A; }
 
 /* GEOMETRIC PATTERN */
-section::before {
+.hero-bg::before,
+.about-bg::before,
+.disciplines-bg::before,
+.work-bg::before,
+.contact-bg::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -61,7 +75,6 @@ header {
   z-index: 100;
 }
 
-/* LOGO */
 .logo {
   display: flex;
   align-items: center;
@@ -78,7 +91,6 @@ header {
   color: #E0C0BC;
   font-weight: 700;
   font-size: 14px;
-  letter-spacing: -0.5px;
 }
 
 .logo h1 {
@@ -108,11 +120,9 @@ nav a:hover { color: #E0C0BC; }
   cursor: pointer;
 }
 
-/* HERO — Deep Space Blue */
-.hero {
-  background-color: #0F1F3A; /* Deep Space Blue */
+/* HERO */
+.hero-inner {
   text-align: center;
-  padding: 120px 40px 80px;
 }
 
 .hero-name {
@@ -135,7 +145,6 @@ nav a:hover { color: #E0C0BC; }
   line-height: 1.6;
 }
 
-
 /* SECTION LABEL */
 .section-label {
   font-size: 0.75rem;
@@ -148,9 +157,9 @@ nav a:hover { color: #E0C0BC; }
 /* ABOUT */
 .about-grid {
   display: grid;
-  grid-template-columns: 0.8fr 1.2fr; /* left column narrower, right column wider */
+  grid-template-columns: 0.8fr 1.2fr;
   gap: 60px;
-  align-items: start; /* keeps both columns aligned at the top */
+  align-items: start;
 }
 
 .about-title {
@@ -195,7 +204,7 @@ nav a:hover { color: #E0C0BC; }
 /* DISCIPLINES */
 .disciplines-header {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr; /* balances heading and paragraph */
+  grid-template-columns: 0.9fr 1.1fr;
   align-items: start;
   margin-bottom: 40px;
 }
@@ -203,7 +212,6 @@ nav a:hover { color: #E0C0BC; }
 .disciplines-title {
   font-size: 4.2rem;
   font-weight: 800;
-  line-height: 1.05;
   margin-bottom: 10px;
 }
 
@@ -236,19 +244,17 @@ nav a:hover { color: #E0C0BC; }
 .discipline-desc { font-size: 0.95rem; color: #BFC3C7; }
 .discipline-arrow { font-size: 1.3rem; color: #7A8CA9; }
 
-/* PORTFOLIO */
+/* WORK */
 .portfolio-header {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  align-items: center;
   margin-bottom: 40px;
 }
 
 .portfolio-title {
   font-size: 4.2rem;
   font-weight: 800;
-  line-height: 1.05;
   margin-bottom: 10px;
 }
 
@@ -256,7 +262,6 @@ nav a:hover { color: #E0C0BC; }
   max-width: 500px;
   font-size: 1rem;
   color: #BFC3C7;
-  margin-top: 10px;
 }
 
 .portfolio-grid {
@@ -300,13 +305,11 @@ nav a:hover { color: #E0C0BC; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
-  align-items: start;
 }
 
 .contact-left h2 {
   font-size: 4.2rem;
   font-weight: 800;
-  line-height: 1.05;
   margin-bottom: 20px;
 }
 
@@ -330,7 +333,6 @@ nav a:hover { color: #E0C0BC; }
   display: flex;
   flex-direction: column;
   gap: 18px;
-  margin-top: 10px;
 }
 
 label {
@@ -365,18 +367,6 @@ footer {
   margin-top: 40px;
 }
 
-/* FADE-IN ANIMATION */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.8s ease;
-}
-
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 /* MOBILE */
 @media (max-width: 900px) {
 
@@ -404,34 +394,10 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  /* MOBILE DISCIPLINE STACKING */
   .discipline-item {
     display: flex;
     flex-direction: column;
     gap: 8px;
     padding: 22px 20px;
-  }
-
-  .discipline-number {
-    font-size: 0.9rem;
-    color: #7A8CA9;
-  }
-
-  .discipline-name {
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: #C0C0C0;
-  }
-
-  .discipline-desc {
-    font-size: 0.95rem;
-    color: #BFC3C7;
-    line-height: 1.5;
-  }
-
-  .discipline-arrow {
-    align-self: flex-end;
-    font-size: 1.2rem;
-    color: #7A8CA9;
   }
 }
