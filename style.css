@@ -108,8 +108,9 @@ nav a:hover { color: #E0C0BC; }
   cursor: pointer;
 }
 
-/* HERO */
+/* HERO — Deep Space Blue */
 .hero {
+  background-color: #0F1F3A; /* Deep Space Blue */
   text-align: center;
   padding: 120px 40px 80px;
 }
@@ -133,6 +134,7 @@ nav a:hover { color: #E0C0BC; }
   font-size: 16px;
   line-height: 1.6;
 }
+
 
 /* SECTION LABEL */
 .section-label {
