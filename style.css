@@ -8,24 +8,32 @@ body {
   line-height: 1.6;
 }
 
-/* GLOBAL SECTION SPACING */
+/* FULL-WIDTH SECTIONS */
 section {
   position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
   padding: 140px 40px;
-  max-width: 1200px;
-  margin: auto;
+  overflow: hidden;
 }
 
-/* ALTERNATING SECTION BACKGROUNDS */
-section:nth-of-type(odd) {
-  background: radial-gradient(circle at top, #14233F 0%, #0F1F3A 60%, #050814 100%);
+/* ALTERNATING BACKGROUNDS */
+.hero {
+  background-color: #0F1F3A; /* Deep Space Blue */
 }
 
-section:nth-of-type(even) {
-  background: radial-gradient(circle at top, #0E1A33 0%, #0A162C 60%, #050814 100%);
+section:nth-of-type(odd):not(.hero) {
+  background-color: #0A162C; /* Navy Blue */
 }
 
-/* GEOMETRIC OVERLAY */
+section:nth-of-type(even):not(.hero) {
+  background-color: #0F1F3A; /* Deep Space Blue */
+}
+
+/* GEOMETRIC PATTERN */
 section::before {
   content: "";
   position: absolute;
@@ -55,15 +63,24 @@ header {
   z-index: 100;
 }
 
+/* LOGO */
 .logo {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 10px;
 }
 
-.logo i {
+.logo-square {
+  width: 32px;
+  height: 32px;
+  border: 2px solid #E0C0BC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #E0C0BC;
-  font-size: 18px;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: -0.5px;
 }
 
 .logo h1 {
@@ -72,6 +89,7 @@ header {
   color: #C0C0C0;
 }
 
+/* NAVIGATION */
 nav {
   display: flex;
   gap: 25px;
@@ -397,11 +415,10 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  /* MOBILE FIX — STACK DISCIPLINE TEXT */
+  /* MOBILE DISCIPLINE STACKING */
   .discipline-item {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     gap: 8px;
     padding: 22px 20px;
   }
