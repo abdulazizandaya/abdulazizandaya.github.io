@@ -8,14 +8,25 @@ body {
   line-height: 1.6;
 }
 
-/* CINEMATIC BACKGROUND + GEOMETRIC PATTERN */
-.section-bg {
-  background: radial-gradient(circle at top, #14233F 0%, #0F1F3A 60%, #050814 100%);
+/* GLOBAL SECTION SPACING */
+section {
   position: relative;
-  overflow: hidden;
+  padding: 140px 40px;
+  max-width: 1200px;
+  margin: auto;
 }
 
-.section-bg::before {
+/* ALTERNATING SECTION BACKGROUNDS */
+section:nth-of-type(odd) {
+  background: radial-gradient(circle at top, #14233F 0%, #0F1F3A 60%, #050814 100%);
+}
+
+section:nth-of-type(even) {
+  background: radial-gradient(circle at top, #0E1A33 0%, #0A162C 60%, #050814 100%);
+}
+
+/* GEOMETRIC OVERLAY */
+section::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -117,12 +128,6 @@ nav a:hover {
 }
 
 /* ABOUT */
-.about-section {
-  padding: 140px 40px;
-  max-width: 1200px;
-  margin: auto;
-}
-
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -167,12 +172,6 @@ nav a:hover {
 }
 
 /* DISCIPLINES */
-.disciplines-section {
-  padding: 140px 40px;
-  max-width: 1200px;
-  margin: auto;
-}
-
 .disciplines-header {
   display: flex;
   justify-content: space-between;
@@ -231,12 +230,6 @@ nav a:hover {
 }
 
 /* PORTFOLIO */
-.portfolio-section {
-  padding: 140px 40px;
-  max-width: 1200px;
-  margin: auto;
-}
-
 .portfolio-header {
   display: flex;
   justify-content: space-between;
@@ -292,9 +285,6 @@ nav a:hover {
 
 /* CONTACT */
 .contact-section {
-  padding: 140px 40px;
-  max-width: 1200px;
-  margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
@@ -366,4 +356,76 @@ footer {
 
 /* FADE-IN ANIMATION */
 .fade-in {
-  opacity: 
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+
+  nav {
+    display: none;
+    flex-direction: column;
+    background: #0F1F3A;
+    position: absolute;
+    top: 70px;
+    right: 40px;
+    padding: 20px;
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .about-grid,
+  .contact-section {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* MOBILE FIX — STACK DISCIPLINE TEXT */
+  .discipline-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 22px 20px;
+  }
+
+  .discipline-number {
+    font-size: 0.9rem;
+    color: #7A8CA9;
+  }
+
+  .discipline-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #C0C0C0;
+  }
+
+  .discipline-desc {
+    font-size: 0.95rem;
+    color: #BFC3C7;
+    line-height: 1.5;
+  }
+
+  .discipline-arrow {
+    align-self: flex-end;
+    font-size: 1.2rem;
+    color: #7A8CA9;
+  }
+}
