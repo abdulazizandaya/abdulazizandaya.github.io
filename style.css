@@ -23,7 +23,7 @@ section {
 .section-inner {
   max-width: 1200px;
   margin: auto;
-  padding: 100px 40px 80px; /* unified rhythm across all sections */
+  padding: 100px 40px 80px; /* unified spacing */
 }
 
 /* ALTERNATING BACKGROUNDS */
@@ -327,3 +327,110 @@ nav a:hover { color: #E0C0BC; }
 
 .contact-right form {
   display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 10px;
+}
+
+label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #7A8CA9;
+}
+
+input,
+textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  color: #C0C0C0;
+  padding: 10px 0;
+}
+
+button {
+  background: #C0C0C0;
+  color: #0F1F3A;
+  padding: 12px 28px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px 0;
+  font-size: 0.85rem;
+  color: #BFC3C7;
+  margin-top: 40px;
+}
+
+/* FADE-IN ANIMATION */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+
+  nav {
+    display: none;
+    flex-direction: column;
+    background: #0F1F3A;
+    position: absolute;
+    top: 70px;
+    right: 40px;
+    padding: 20px;
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+
+  nav.active { display: flex; }
+
+  .hamburger { display: block; }
+
+  .about-grid,
+  .contact-section {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* MOBILE DISCIPLINE STACKING */
+  .discipline-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 22px 20px;
+  }
+
+  .discipline-number {
+    font-size: 0.9rem;
+    color: #7A8CA9;
+  }
+
+  .discipline-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #C0C0C0;
+  }
+
+  .discipline-desc {
+    font-size: 0.95rem;
+    color: #BFC3C7;
+    line-height: 1.5;
+  }
+
+  .discipline-arrow {
+    align-self: flex-end;
+    font-size: 1.2rem;
+    color: #7A8CA9;
+  }
+}
