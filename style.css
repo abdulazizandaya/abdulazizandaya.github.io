@@ -11,7 +11,7 @@ body {
 /* FULL-WIDTH BACKGROUND WITH CENTERED CONTENT */
 section {
   position: relative;
-  width: 100vw; /* full viewport width */
+  width: 100vw;
   left: 50%;
   right: 50%;
   margin-left: -50vw;
@@ -20,25 +20,16 @@ section {
 }
 
 /* Inner content stays centered */
-section > * {
+.section-inner {
   max-width: 1200px;
   margin: auto;
-  padding: 140px 40px;
+  padding: 100px 40px 80px; /* unified rhythm across all sections */
 }
-
 
 /* ALTERNATING BACKGROUNDS */
-.hero {
-  background-color: #0F1F3A; /* Deep Space Blue */
-}
-
-section:nth-of-type(odd):not(.hero) {
-  background-color: #0A162C; /* Navy Blue */
-}
-
-section:nth-of-type(even):not(.hero) {
-  background-color: #0F1F3A; /* Deep Space Blue */
-}
+.hero { background-color: #0F1F3A; }
+section:nth-of-type(odd):not(.hero) { background-color: #0A162C; }
+section:nth-of-type(even):not(.hero) { background-color: #0F1F3A; }
 
 /* GEOMETRIC PATTERN */
 section::before {
@@ -108,9 +99,7 @@ nav a {
   font-size: 15px;
 }
 
-nav a:hover {
-  color: #E0C0BC;
-}
+nav a:hover { color: #E0C0BC; }
 
 .hamburger {
   display: none;
@@ -122,25 +111,20 @@ nav a:hover {
 /* HERO */
 .hero {
   text-align: center;
-  padding: 160px 40px 120px;
-}
-
-.hero {
-  text-align: center;
-  padding: 120px 40px 80px; /* reduced top and bottom padding */
+  padding: 120px 40px 80px;
 }
 
 .hero-name {
   font-size: 72px;
   font-weight: 700;
   color: #FFFFFF;
-  margin-bottom: 20px; /* tighter spacing below name */
+  margin-bottom: 20px;
 }
 
 .hero-title {
   font-size: 24px;
   color: #BFC3C7;
-  margin-bottom: 12px; /* smaller gap below subtitle */
+  margin-bottom: 12px;
 }
 
 .hero-subtext {
@@ -149,7 +133,6 @@ nav a:hover {
   font-size: 16px;
   line-height: 1.6;
 }
-
 
 /* SECTION LABEL */
 .section-label {
@@ -164,18 +147,21 @@ nav a:hover {
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  gap: 40px;
+  align-items: center;
 }
 
 .about-title {
   font-size: 4.2rem;
   font-weight: 800;
   line-height: 1.05;
+  margin-bottom: 20px;
 }
 
 .about-text {
   font-size: 1rem;
   color: #BFC3C7;
+  margin-bottom: 20px;
 }
 
 .about-quote {
@@ -187,9 +173,9 @@ nav a:hover {
 
 .about-stats {
   display: flex;
-  gap: 80px;
-  margin-top: 40px;
-  padding-top: 30px;
+  gap: 60px;
+  margin-top: 30px;
+  padding-top: 20px;
   border-top: 1px solid rgba(255,255,255,0.1);
 }
 
@@ -209,23 +195,26 @@ nav a:hover {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-bottom: 60px;
+  align-items: center;
+  margin-bottom: 40px;
 }
 
 .disciplines-title {
   font-size: 4.2rem;
   font-weight: 800;
+  line-height: 1.05;
+  margin-bottom: 10px;
 }
 
 .disciplines-sub {
   max-width: 500px;
   font-size: 1rem;
   color: #BFC3C7;
+  margin-top: 10px;
 }
 
 .disciplines-list {
-  display: flex;
-  flex-direction: column;
+  margin-top: 30px;
   border-top: 1px solid rgba(255,255,255,0.1);
 }
 
@@ -239,49 +228,38 @@ nav a:hover {
   transition: 0.3s;
 }
 
-.discipline-item:hover {
-  background: rgba(255,255,255,0.05);
-}
+.discipline-item:hover { background: rgba(255,255,255,0.05); }
 
-.discipline-number {
-  color: #7A8CA9;
-}
-
-.discipline-name {
-  font-size: 1.2rem;
-  font-weight: 600;
-}
-
-.discipline-desc {
-  font-size: 0.95rem;
-  color: #BFC3C7;
-}
-
-.discipline-arrow {
-  font-size: 1.3rem;
-  color: #7A8CA9;
-}
+.discipline-number { color: #7A8CA9; }
+.discipline-name { font-size: 1.2rem; font-weight: 600; }
+.discipline-desc { font-size: 0.95rem; color: #BFC3C7; }
+.discipline-arrow { font-size: 1.3rem; color: #7A8CA9; }
 
 /* PORTFOLIO */
 .portfolio-header {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 40px;
 }
 
 .portfolio-title {
   font-size: 4.2rem;
   font-weight: 800;
+  line-height: 1.05;
+  margin-bottom: 10px;
 }
 
 .portfolio-sub {
   max-width: 500px;
   font-size: 1rem;
   color: #BFC3C7;
+  margin-top: 10px;
 }
 
 .portfolio-grid {
-  margin-top: 40px;
+  margin-top: 30px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
   gap: 40px;
@@ -321,18 +299,21 @@ nav a:hover {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
+  align-items: start;
 }
 
 .contact-left h2 {
   font-size: 4.2rem;
   font-weight: 800;
+  line-height: 1.05;
+  margin-bottom: 20px;
 }
 
 .contact-info {
-  margin-top: 40px;
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
 }
 
 .contact-item {
@@ -341,123 +322,8 @@ nav a:hover {
   gap: 12px;
 }
 
-.contact-item i {
-  font-size: 1.4rem;
-}
-
-.contact-item a {
-  color: #C0C0C0;
-  text-decoration: none;
-}
+.contact-item i { font-size: 1.4rem; }
+.contact-item a { color: #C0C0C0; text-decoration: none; }
 
 .contact-right form {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-label {
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  color: #7A8CA9;
-}
-
-input,
-textarea {
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-  color: #C0C0C0;
-  padding: 10px 0;
-}
-
-button {
-  background: #C0C0C0;
-  color: #0F1F3A;
-  padding: 12px 28px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 40px;
-  font-size: 0.85rem;
-  color: #BFC3C7;
-}
-
-/* FADE-IN ANIMATION */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.8s ease;
-}
-
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* MOBILE */
-@media (max-width: 900px) {
-
-  nav {
-    display: none;
-    flex-direction: column;
-    background: #0F1F3A;
-    position: absolute;
-    top: 70px;
-    right: 40px;
-    padding: 20px;
-    border: 1px solid rgba(255,255,255,0.1);
-  }
-
-  nav.active {
-    display: flex;
-  }
-
-  .hamburger {
-    display: block;
-  }
-
-  .about-grid,
-  .contact-section {
-    grid-template-columns: 1fr;
-  }
-
-  .portfolio-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* MOBILE DISCIPLINE STACKING */
-  .discipline-item {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    padding: 22px 20px;
-  }
-
-  .discipline-number {
-    font-size: 0.9rem;
-    color: #7A8CA9;
-  }
-
-  .discipline-name {
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: #C0C0C0;
-  }
-
-  .discipline-desc {
-    font-size: 0.95rem;
-    color: #BFC3C7;
-    line-height: 1.5;
-  }
-
-  .discipline-arrow {
-    align-self: flex-end;
-    font-size: 1.2rem;
-    color: #7A8CA9;
-  }
-}
