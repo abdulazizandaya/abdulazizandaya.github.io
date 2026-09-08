@@ -447,3 +447,22 @@ footer {
     color: #7A8CA9;
   }
 }
+/* Alternating section backgrounds */
+section:nth-of-type(odd) {
+  background: radial-gradient(circle at top, #14233F 0%, #0F1F3A 60%, #050814 100%);
+}
+
+section:nth-of-type(even) {
+  background: radial-gradient(circle at top, #0E1A33 0%, #0A162C 60%, #050814 100%);
+}
+section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(45deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 22px),
+    repeating-linear-gradient(-45deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 22px);
+  opacity: 0.25;
+  pointer-events: none;
+  animation: drift 60s linear infinite;
+}
