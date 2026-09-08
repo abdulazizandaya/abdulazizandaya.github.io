@@ -406,3 +406,44 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+@media (max-width: 900px) {
+  /* Existing mobile rules stay here */
+
+  .discipline-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 22px 20px;
+  }
+
+  .discipline-item span {
+    display: block;
+  }
+
+  .discipline-number {
+    font-size: 0.9rem;
+    color: #7A8CA9;
+    margin-bottom: 4px;
+  }
+
+  .discipline-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #C0C0C0;
+    margin-bottom: 6px;
+  }
+
+  .discipline-desc {
+    font-size: 0.95rem;
+    color: #BFC3C7;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+
+  .discipline-arrow {
+    align-self: flex-end;
+    font-size: 1.2rem;
+    color: #7A8CA9;
+  }
+}
