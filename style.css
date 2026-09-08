@@ -148,9 +148,9 @@ nav a:hover { color: #E0C0BC; }
 /* ABOUT */
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: center;
+  grid-template-columns: 0.8fr 1.2fr; /* left column narrower, right column wider */
+  gap: 60px;
+  align-items: start; /* keeps both columns aligned at the top */
 }
 
 .about-title {
@@ -194,10 +194,9 @@ nav a:hover { color: #E0C0BC; }
 
 /* DISCIPLINES */
 .disciplines-header {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr; /* balances heading and paragraph */
+  align-items: start;
   margin-bottom: 40px;
 }
 
