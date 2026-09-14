@@ -144,6 +144,40 @@ nav a:hover { color: #E0C0BC; }
   font-size: 16px;
   line-height: 1.6;
 }
+.hero {
+  text-align: center;
+  padding: 8rem 2rem;
+  background-color: #0b1623; /* your midnight blue */
+  color: #fff;
+}
+
+.hero-logo-img {
+  width: 180px;
+  height: auto;
+  margin-bottom: 2rem;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.hero-tagline {
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-style: italic;
+  color: #c0c0c0;
+  margin-bottom: 1rem;
+}
+
+.hero-subtext {
+  font-size: 1rem;
+  color: #9aa0a6;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
 /* SECTION LABEL */
 .section-label {
