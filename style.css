@@ -7,6 +7,21 @@ body {
   color: #C0C0C0;
   line-height: 1.6;
 }
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-img {
+  height: 48px; /* adjust as needed */
+  width: auto;
+  transition: opacity 0.3s ease;
+}
+
+.logo-img:hover {
+  opacity: 0.85;
+}
 
 /* OUTER FULL-WIDTH BACKGROUND */
 .bg-section {
