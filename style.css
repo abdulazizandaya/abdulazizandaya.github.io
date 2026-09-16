@@ -266,10 +266,9 @@ nav a:hover { color: #E0C0BC; }
   align-items: start;
 }
 
-.about-title {
-  font-size: 4.2rem;
-  font-weight: 800;
-  margin-bottom: 20px;
+.about-right p {
+  max-width: 520px; /* keeps text readable and balanced */
+  margin-bottom: 14px;
 }
 
 .about-right p {
@@ -279,12 +278,14 @@ nav a:hover { color: #E0C0BC; }
 }
 
 .about-stats {
-  display: flex;
-  gap: 60px;
-  margin-top: 30px;
-  padding-top: 20px;
+  margin-top: 40px;
+  padding-top: 25px;
   border-top: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  gap: 80px;
+  flex-wrap: wrap;
 }
+
 
 .stat h3 {
   font-size: 1.8rem;
