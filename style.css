@@ -143,24 +143,27 @@ nav a:hover { color: #E0C0BC; }
 
 /* HERO — Apple/DJI Light Cinematic */
 .hero {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   align-items: center;
-  gap: 60px;
+  justify-content: center; /* centers both image and text horizontally */
+  gap: 80px; /* space between photo and text */
   padding: 8rem 6rem;
   background: linear-gradient(180deg, #f5f5f5, #e9ecef);
   color: #1a1a1a;
 }
 
+
 /* LEFT SIDE — Portrait */
-.hero-image {
+.hero-image img {
   width: 100%;
-  max-width: 480px;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-  justify-self: center;
+  max-width: 420px;
+  height: auto;
+  display: block;
+  margin: auto;
+  border-radius: 0; /* removes bounding frame */
+  box-shadow: none; /* keeps it spontaneous and clean */
 }
+
 
 .hero-image img {
   width: 100%;
@@ -177,11 +180,12 @@ nav a:hover { color: #E0C0BC; }
 
 /* Logo */
 .hero-logo-img {
-  width: 120px;
-  opacity: 0;
+  width: 180px; /* slightly larger for presence */
+  height: auto;
+  margin-bottom: 1rem;
   animation: fadeIn 1.2s ease forwards;
-  margin-bottom: 0.5rem;
 }
+
 
 /* Name */
 .hero-tagline {
@@ -266,37 +270,39 @@ nav a:hover { color: #E0C0BC; }
   align-items: start;
 }
 
+.about-right {
+  padding-left: 30px; /* subtle offset for balance */
+}
+
 .about-right p {
-  max-width: 520px; /* keeps text readable and balanced */
+  max-width: 520px;
   margin-bottom: 14px;
 }
 
-.about-right p {
-  font-size: 1rem;
-  color: #BFC3C7;
-  margin-bottom: 12px;
-}
-
 .about-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px; /* slightly less spacing */
   margin-top: 40px;
   padding-top: 25px;
   border-top: 1px solid rgba(255,255,255,0.1);
-  display: flex;
-  gap: 80px;
-  flex-wrap: wrap;
+  justify-content: flex-start;
 }
-
 
 .stat h3 {
   font-size: 1.8rem;
   font-weight: 700;
+  margin-bottom: 0.1rem;
 }
 
 .stat p {
   font-size: 0.75rem;
   text-transform: uppercase;
   color: #7A8CA9;
+  line-height: 1.3;
 }
+
+
 
 /* DISCIPLINES */
 .disciplines-header {
