@@ -159,11 +159,15 @@ nav a:hover { color: #E0C0BC; }
 /* Navy strip to remove floating effect */
 .hero::after {
   content: "";
-  display: block;
-  height: 120px;
-  background-color: #0b1a33;
-  margin-top: 4rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100vw; /* spans full screen width */
+  height: 60px; /* thinner strip */
+  background-color: #C8C8C8; /* matte silver tone */
+  z-index: 1;
 }
+
 
 /* ============================
    LEFT SIDE — Portrait
