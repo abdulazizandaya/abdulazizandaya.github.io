@@ -40,25 +40,30 @@ function fadeInOnScroll() {
 
 window.addEventListener("scroll", fadeInOnScroll);
 fadeInOnScroll();
-const form = document.querySelector('form');
+const form = document.getElementById('contactForm');
 const popup = document.getElementById('successPopup');
 const closePopup = document.getElementById('closePopup');
 
 form.addEventListener('submit', async (e) => {
-  e.preventDefault();
+  e.preventDefault(); // stop the browser from redirecting
 
   const formData = new FormData(form);
-  const response = await fetch(form.action, {
-    method: form.method,
-    body: formData,
-    headers: { 'Accept': 'application/json' }
-  });
 
-  if (response.ok) {
-    popup.style.display = 'flex';
-    form.reset();
-  } else {
-    alert('Oops! Something went wrong.');
+  try {
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      popup.style.display = 'flex'; // show popup
+      form.reset();
+    } else {
+      alert('Something went wrong. Please try again.');
+    }
+  } catch (error) {
+    alert('Network error. Please check your connection.');
   }
 });
 
