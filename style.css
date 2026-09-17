@@ -142,7 +142,7 @@ nav a:hover { color: #E0C0BC; }
 }
 
 /* ============================
-   HERO SECTION — PREMIUM VERSION
+   HERO SECTION — FINAL VERSION
    ============================ */
 
 .hero {
@@ -154,20 +154,8 @@ nav a:hover { color: #E0C0BC; }
   background: linear-gradient(180deg, #f5f5f5, #e9ecef);
   color: #1a1a1a;
   position: relative;
+  padding-bottom: 0; /* ensures hero touches divider */
 }
-
-/* Navy strip to remove floating effect */
-.hero::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100vw; /* spans full screen width */
-  height: 60px; /* thinner strip */
-  background-color: #C8C8C8; /* matte silver tone */
-  z-index: 1;
-}
-
 
 /* ============================
    LEFT SIDE — Portrait
@@ -234,7 +222,7 @@ nav a:hover { color: #E0C0BC; }
   letter-spacing: 0.02em;
 }
 
-/* Quote — cinematic, refined */
+/* Quote — refined, left‑anchored emphasis */
 .hero-quote {
   position: relative;
   font-style: italic;
@@ -242,27 +230,55 @@ nav a:hover { color: #E0C0BC; }
   color: #5A6A85;
   max-width: 480px;
   line-height: 1.6;
-  padding-left: 3.2rem; /* space for the big quote mark */
+  padding-left: 3.2rem;
 }
 
-/* BIG left‑aligned quotation mark */
 .hero-quote::before {
   content: "“";
   position: absolute;
   left: 0;
   top: -8px;
-  font-size: 4.8rem; /* bigger, more premium */
+  font-size: 4.8rem;
   line-height: 0.8;
-  color: rgba(0,0,0,0.12); /* subtle, elegant */
+  color: rgba(0,0,0,0.12);
   font-family: serif;
 }
 
+/* ============================
+   HERO DIVIDER — Matte Silver
+   ============================ */
+
 .hero-divider {
   width: 100%;
-  height: 60px; /* thin height */
-  background-color: #2b2b2b; /* dark matte gray */
-  margin-top: 0; /* removes gap between hero and divider */
+  height: 40px; /* thin strip */
+  background-color: #b8b8b8; /* matte silver */
+  margin-top: 0; /* flush with hero */
 }
+
+/* ============================
+   MOBILE RESPONSIVE
+   ============================ */
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 5rem 2rem 0;
+  }
+
+  .hero-content {
+    align-items: center;
+  }
+
+  .hero-quote {
+    padding-left: 0;
+  }
+
+  .hero-quote::before {
+    display: none;
+  }
+}
+
 
 /* ============================
    MOBILE RESPONSIVE
