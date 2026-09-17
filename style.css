@@ -167,6 +167,7 @@ nav a:hover { color: #E0C0BC; }
   margin: auto;
   border-radius: 0;
   box-shadow: none;
+  justify-self: end; /* moves image closer to text */
 }
 
 /* Content Stack */
@@ -175,11 +176,12 @@ nav a:hover { color: #E0C0BC; }
   flex-direction: column;
   gap: 1rem;
   align-items: flex-start;
+   justify-self: start; /* keeps text aligned toward image */
 }
 
 /* Logo */
 .hero-logo-img {
-  width: 120px;
+  width: 250px;
   height: auto;
   margin-bottom: 1rem;
 }
