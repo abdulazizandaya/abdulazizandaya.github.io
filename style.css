@@ -149,21 +149,18 @@ nav a:hover { color: #E0C0BC; }
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
   align-items: center;
-  gap: 80px;
-  padding: 8rem 6rem 0;
-  background: linear-gradient(180deg, #f5f5f5, #e9ecef);
+  gap: 60px;
+  padding: 6rem 5rem 0;
+  background: linear-gradient(180deg, #f5f5f5 0%, #e9ecef 100%);
   color: #1a1a1a;
   position: relative;
-  padding-bottom: 0; /* ensures hero touches divider */
+  padding-bottom: 0;
 }
 
-/* ============================
-   LEFT SIDE — Portrait
-   ============================ */
-
+/* Portrait */
 .hero-image img {
   width: 100%;
-  max-width: 420px;
+  max-width: 400px;
   height: auto;
   display: block;
   margin: auto;
@@ -171,94 +168,83 @@ nav a:hover { color: #E0C0BC; }
   box-shadow: none;
 }
 
-/* ============================
-   RIGHT SIDE — Identity Stack
-   ============================ */
-
+/* Content Stack */
 .hero-content {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 1rem;
+  align-items: flex-start;
 }
 
-/* Logo — bigger, more presence */
+/* Logo */
 .hero-logo-img {
-  width: 160px;
+  width: 120px;
   height: auto;
-  margin-bottom: 1.2rem;
-  animation: fadeIn 1.2s ease forwards;
+  margin-bottom: 1rem;
 }
 
-/* Name — Montserrat Light, ALL CAPS */
+/* Name */
 .hero-tagline {
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   text-transform: uppercase;
-  font-size: 2.6rem;
+  font-size: 2.4rem;
   letter-spacing: 0.08em;
   color: #0b1a33;
   margin: 0;
 }
 
-/* Job Title — Montserrat Medium */
+/* Title */
 .hero-title {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   letter-spacing: 0.04em;
   color: #4a4a4a;
   margin-top: 0.4rem;
 }
 
-/* Disciplines — subtle, premium */
+/* Disciplines */
 .hero-disciplines {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: #7A8CA9;
   line-height: 1.6;
   max-width: 420px;
-  margin-bottom: 1.5rem;
-  letter-spacing: 0.02em;
+  margin-bottom: 1.2rem;
 }
 
-/* Quote — refined, left‑anchored emphasis */
+/* Quote */
 .hero-quote {
   position: relative;
   font-style: italic;
-  font-size: 1.05rem;
+  font-size: 1rem;
   color: #5A6A85;
   max-width: 480px;
   line-height: 1.6;
-  padding-left: 3.2rem;
+  padding-left: 3rem;
 }
 
 .hero-quote::before {
   content: "“";
   position: absolute;
   left: 0;
-  top: -8px;
-  font-size: 4.8rem;
-  line-height: 0.8;
+  top: -10px;
+  font-size: 4.2rem;
   color: rgba(0,0,0,0.12);
   font-family: serif;
 }
 
-/* ============================
-   HERO DIVIDER — Matte Silver
-   ============================ */
-
+/* Divider */
 .hero-divider {
   width: 100%;
-  height: 40px; /* thin strip */
-  background-color: #b8b8b8; /* matte silver */
-  margin-top: 0; /* flush with hero */
+  height: 35px;
+  background-color: #b8b8b8;
+  margin-top: 0;
 }
 
-/* ============================
-   MOBILE RESPONSIVE
-   ============================ */
-
+/* Responsive */
 @media (max-width: 900px) {
   .hero {
     grid-template-columns: 1fr;
@@ -276,28 +262,6 @@ nav a:hover { color: #E0C0BC; }
 
   .hero-quote::before {
     display: none;
-  }
-}
-
-
-/* ============================
-   MOBILE RESPONSIVE
-   ============================ */
-
-@media (max-width: 900px) {
-  .hero {
-    grid-template-columns: 1fr;
-    text-align: center;
-    padding: 5rem 2rem 0;
-  }
-
-  .hero-content {
-    align-items: center;
-  }
-
-  .hero-quote {
-    border-left: none;
-    padding-left: 0;
   }
 }
 
