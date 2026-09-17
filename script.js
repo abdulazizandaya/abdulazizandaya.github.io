@@ -40,3 +40,28 @@ function fadeInOnScroll() {
 
 window.addEventListener("scroll", fadeInOnScroll);
 fadeInOnScroll();
+const form = document.querySelector('form');
+const popup = document.getElementById('successPopup');
+const closePopup = document.getElementById('closePopup');
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const formData = new FormData(form);
+  const response = await fetch(form.action, {
+    method: form.method,
+    body: formData,
+    headers: { 'Accept': 'application/json' }
+  });
+
+  if (response.ok) {
+    popup.style.display = 'flex';
+    form.reset();
+  } else {
+    alert('Oops! Something went wrong.');
+  }
+});
+
+closePopup.addEventListener('click', () => {
+  popup.style.display = 'none';
+});
